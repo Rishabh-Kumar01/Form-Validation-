@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Survey Form</title>
+    <link rel="stylesheet" href="styles.css">
+    <script src="script.js" defer></script>
+</head>
+<body>
+    <h1 id="title">Mine Survery Form</h1>
+    <p id="description">Thank you for taking the time to help us improve the platform</p>
+    <form action="#" id="survey-form" onsubmit="return validation()">
+        <div>
+            <label for="name" id="name-label">Name</label>
+        </div>
+        <input type="text" placeholder="Enter your name" id="name" required>
+        <div>
+            <label for="email" id="email-label">Email</label>
+        </div>
+        <input type="email" placeholder="Enter your email" id="email" required>
+        <div>
+            <label for="age" id="number-label">Age (optional)</label>
+        </div>
+        <input type="number" placeholder="Age" id="number" min="1" max="99">
+        <div>
+            <label for="role">Which option best describes your current role?</label>
+        </div>
+        <select id="dropdown">
+            <option value="select current role">Select current role</option>
+            <option value="student">Student</option>
+            <option value="full time job">Full time job</option>
+            <option value="full time learner">Full time learner</option>
+            <option value="prefer not to say">Prefer not to say</option>
+            <option value="other">Other</option>
+        </select>
+        <div>
+            <label for="recommend">Would you recommend freeCodeCamp to a friend?</label>
+        </div>
+        <input type="radio" name="radio_group" class="selecting"  value="Definitely" >
+        <label for="definitely">Definitely</label><br>
+        <input type="radio" name="radio_group" class="selecting"  value="Maybe">
+        <label for="maybe">Maybe</label><br>
+        <input type="radio" name="radio_group" class="selecting" id="lastradio" value="Not Sure">
+        <label for="not_sure">Not Sure</label>
+        <div>
+            <label for="feature">What is your favorite feature of freeCodeCamp?</label>
+        </div>
+        <select id="dropdown">
+            <option value="challenges">Challenges</option>
+            <option value="projects">Projects</option>
+            <option value="community">Community</option>
+            <option value="opensource">Open Source</option>
+        </select>
+        <div>
+            <label for="improvement">What would you like to see improved? (Check all that apply)</label>
+        </div>
+        <input type="checkbox" name="checkbox_group" class="selecting"  value="Front-end Projects">
+        <label for="frontendprojects">Front-end Projects</label><br>
+        <input type="checkbox" name="checkbox_group" class="selecting"  value="Back-end Projects">
+        <label for="backendprojects">Back-end Projects</label><br>
+        <input type="checkbox" name="datavisualization" class="selecting"  value="Data Visualization">
+        <label for="datavisualization">Data Visualization</label><br>
+        <input type="checkbox" name="checkbox_group" class="selecting"  value="Front-end Projects">
+        <label for="frontendprojects">Challenges</label><br>
+        <input type="checkbox" name="checkbox_group" class="selecting"  value="Back-end Projects">
+        <label for="backendprojects">Open Source Community</label><br>
+        <input type="checkbox" name="datavisualization" class="selecting"  value="Data Visualization">
+        <label for="datavisualization">Gitter help rooms</label><br>
+        <input type="checkbox" name="checkbox_group" class="selecting"  value="Front-end Projects">
+        <label for="frontendprojects">Videos</label><br>
+        <input type="checkbox" name="checkbox_group" class="selecting"  value="Back-end Projects">
+        <label for="backendprojects">City Meetups</label><br>
+        <input type="checkbox" name="datavisualization" class="selecting"  value="Data Visualization">
+        <label for="datavisualization">wiki</label><br>
+        <input type="checkbox" name="checkbox_group" class="selecting"  value="Back-end Projects">
+        <label for="backendprojects">Forum</label><br>
+        <input type="checkbox" name="datavisualization" class="selecting" id="lastcheckbox" value="Data Visualization">
+        <label for="datavisualization">Additional Courses</label>
+    
+    <div>
+        <label for="comments/suggestions">Any comments or suggestions?</label>
+    </div>
+    <textarea name="comments/suggestions" id="comments" cols="30" rows="10">Enter your comment here...</textarea><br>
+    <input type="submit" value="Submit" id="submit">
+    </form>
+</body>
+</html>

@@ -1,0 +1,90 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: 'Poppins', sans-serif;
+    background-image: linear-gradient(115deg, rgba(58, 58, 158, 0.8), rgba(136, 136, 206, 0.7) ),
+     url('https://cdn.freecodecamp.org/testable-projects-fcc/images/survey-form-background.jpeg');
+    width: 100%;
+    height: 100%;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+}
+
+#title {
+    text-align: center;
+    font-weight: 400;
+    line-height: 1.2;
+    margin-bottom: .5rem;
+    margin-top: 2rem;
+    color: rgb(243, 242, 242);
+    font-size: 1.4rem;
+}
+
+#description {
+    text-align: center;
+    font-style: italic;
+    font-weight: 200;
+    text-shadow: 1px 1px 1px rgba(0, 0, 0, 0.4);
+    color: rgb(243, 242, 242);
+    font-size: .9rem;
+}
+
+#survey-form {
+    background-color: rgb(36, 36, 68);
+    margin: 1rem 18rem 0 18rem;
+    padding: 1.7rem 1.4rem;
+    border-radius: .3rem;
+    box-shadow: 0 0 0 1px rgba(50, 52, 164, 0.4);
+}
+
+label {
+    color: white;
+    font-size: .9rem;
+}
+
+div {
+    margin-bottom: .3rem;
+}
+
+#name, #email, #number, #dropdown,#comments {
+    width: 100%;
+    margin-bottom: .8rem;
+    padding: .2rem;
+    font-size: .7rem;
+    font-family: monospace;
+    border: 1px solid rgb(83, 80, 80);
+    border-radius: .2rem;
+}
+
+#comments {
+    padding: .5rem;
+}
+
+#name:focus,#email:focus,#number:focus,#dropdown:focus,#comments:focus {
+    outline: none;
+    border-color: #80bdff;
+    box-shadow: 0 0 0 .1rem rgb(0 123 255 / 25%);
+}
+
+.selecting {
+    margin-bottom: .4rem;
+}
+
+#lastcheckbox,#lastradio {
+    margin-bottom: .9rem;
+}
+
+#submit {
+    width: 100%;
+    color: white;
+    padding: .4rem;
+    background-color: hsl(143, 52%, 45%);
+    border: none;
+    border-radius: .2rem;
+}
+
