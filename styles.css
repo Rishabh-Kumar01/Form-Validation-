@@ -51,7 +51,7 @@ div {
     margin-bottom: .3rem;
 }
 
-#name, #email, #number, #dropdown,#comments {
+#name, #email, #number, #dropdownrole, #dropdownfeature,#comments {
     width: 100%;
     margin-bottom: .8rem;
     padding: .2rem;
