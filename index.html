@@ -4,6 +4,7 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin><link href="https://fonts.googleapis.com/css2?family=Raleway:wght@100&display=swap" rel="stylesheet">
     <title>Survey Form</title>
     <link rel="stylesheet" href="styles.css">
     <script src="script.js" defer></script>
@@ -14,75 +15,95 @@
     <form action="#" id="survey-form" onsubmit="return validation()">
         <div>
             <label for="name" id="name-label">Name</label>
+            <input type="text" placeholder="Enter your name" id="name" autocomplete="off" >
+
+            <span id="Name"></span>
         </div>
-        <input type="text" placeholder="Enter your name" id="name" required>
+        
         <div>
             <label for="email" id="email-label">Email</label>
+            <input type="text" placeholder="Enter your email" id="email" autocomplete="off" >
+
+            <span id="Email"></span>
         </div>
-        <input type="email" placeholder="Enter your email" id="email" required>
+        
         <div>
             <label for="age" id="number-label">Age (optional)</label>
+            <input type="number" placeholder="Age" id="number" >
+
+            <span id="Age"></span>
         </div>
-        <input type="number" placeholder="Age" id="number" min="1" max="99">
+        
         <div>
             <label for="role">Which option best describes your current role?</label>
+            <select id="dropdownrole" required>
+                <option disabled selected value>Select current role</option>
+                <option value="student">Student</option>
+                <option value="full time job">Full time job</option>
+                <option value="full time learner">Full time learner</option>
+                <option value="prefer not to say">Prefer not to say</option>
+                <option value="other">Other</option>
+            </select>
+
+            <span id="Role"></span>
         </div>
-        <select id="dropdown">
-            <option value="select current role">Select current role</option>
-            <option value="student">Student</option>
-            <option value="full time job">Full time job</option>
-            <option value="full time learner">Full time learner</option>
-            <option value="prefer not to say">Prefer not to say</option>
-            <option value="other">Other</option>
-        </select>
+        
         <div>
             <label for="recommend">Would you recommend MineCamp to a friend?</label>
+            <br>
+            <input type="radio" name="radio_group" class="radioselecting"  value="Definitely" checked >
+            <label for="definitely">Definitely</label><br>
+            <input type="radio" name="radio_group" class="radioselecting"  value="Maybe">
+            <label for="maybe">Maybe</label><br>
+            <input type="radio" name="radio_group" class="radioselecting" id="lastradio" value="Not Sure">
+            <label for="not_sure">Not Sure</label>
         </div>
-        <input type="radio" name="radio_group" class="selecting"  value="Definitely" >
-        <label for="definitely">Definitely</label><br>
-        <input type="radio" name="radio_group" class="selecting"  value="Maybe">
-        <label for="maybe">Maybe</label><br>
-        <input type="radio" name="radio_group" class="selecting" id="lastradio" value="Not Sure">
-        <label for="not_sure">Not Sure</label>
+        
         <div>
             <label for="feature">What is your favorite feature of MineCamp?</label>
+            <select id="dropdownfeature" required>
+                <option disabled selected value>Select an option</option>
+                <option value="challenges">Challenges</option>
+                <option value="projects">Projects</option>
+                <option value="community">Community</option>
+                <option value="opensource">Open Source</option>
+            </select>
         </div>
-        <select id="dropdown">
-            <option value="challenges">Challenges</option>
-            <option value="projects">Projects</option>
-            <option value="community">Community</option>
-            <option value="opensource">Open Source</option>
-        </select>
+        
         <div>
             <label for="improvement">What would you like to see improved? (Check all that apply)</label>
+            <br>
+
+            <input type="checkbox" name="checkbox_group" class="checkboxselecting"  value="Front-end Projects">
+            <label for="frontendprojects">Front-end Projects</label><br>
+            <input type="checkbox" name="checkbox_group" class="checkboxselecting"  value="Back-end Projects">
+            <label for="backendprojects">Back-end Projects</label><br>
+            <input type="checkbox" name="datavisualization" class="checkboxselecting"  value="Data Visualization">
+            <label for="datavisualization">Data Visualization</label><br>
+            <input type="checkbox" name="checkbox_group" class="checkboxselecting"  value="Front-end Projects">
+            <label for="frontendprojects">Challenges</label><br>
+            <input type="checkbox" name="checkbox_group" class="checkboxselecting"  value="Back-end Projects">
+            <label for="backendprojects">Open Source Community</label><br>
+            <input type="checkbox" name="datavisualization" class="checkboxselecting"  value="Data Visualization">
+            <label for="datavisualization">Gitter help rooms</label><br>
+            <input type="checkbox" name="checkbox_group" class="checkboxselecting"  value="Front-end Projects">
+            <label for="frontendprojects">Videos</label><br>
+            <input type="checkbox" name="checkbox_group" class="checkboxselecting"  value="Back-end Projects">
+            <label for="backendprojects">City Meetups</label><br>
+            <input type="checkbox" name="datavisualization" class="checkboxselecting"  value="Data Visualization">
+            <label for="datavisualization">wiki</label><br>
+            <input type="checkbox" name="checkbox_group" class="checkboxselecting"  value="Back-end Projects">
+            <label for="backendprojects">Forum</label><br>
+            <input type="checkbox" name="datavisualization" class="checkboxselecting" id="lastcheckbox" value="Data Visualization">
+            <label for="datavisualization">Additional Courses</label>
         </div>
-        <input type="checkbox" name="checkbox_group" class="selecting"  value="Front-end Projects">
-        <label for="frontendprojects">Front-end Projects</label><br>
-        <input type="checkbox" name="checkbox_group" class="selecting"  value="Back-end Projects">
-        <label for="backendprojects">Back-end Projects</label><br>
-        <input type="checkbox" name="datavisualization" class="selecting"  value="Data Visualization">
-        <label for="datavisualization">Data Visualization</label><br>
-        <input type="checkbox" name="checkbox_group" class="selecting"  value="Front-end Projects">
-        <label for="frontendprojects">Challenges</label><br>
-        <input type="checkbox" name="checkbox_group" class="selecting"  value="Back-end Projects">
-        <label for="backendprojects">Open Source Community</label><br>
-        <input type="checkbox" name="datavisualization" class="selecting"  value="Data Visualization">
-        <label for="datavisualization">Gitter help rooms</label><br>
-        <input type="checkbox" name="checkbox_group" class="selecting"  value="Front-end Projects">
-        <label for="frontendprojects">Videos</label><br>
-        <input type="checkbox" name="checkbox_group" class="selecting"  value="Back-end Projects">
-        <label for="backendprojects">City Meetups</label><br>
-        <input type="checkbox" name="datavisualization" class="selecting"  value="Data Visualization">
-        <label for="datavisualization">wiki</label><br>
-        <input type="checkbox" name="checkbox_group" class="selecting"  value="Back-end Projects">
-        <label for="backendprojects">Forum</label><br>
-        <input type="checkbox" name="datavisualization" class="selecting" id="lastcheckbox" value="Data Visualization">
-        <label for="datavisualization">Additional Courses</label>
+        
     
     <div>
         <label for="comments/suggestions">Any comments or suggestions?</label>
+        <textarea name="comments/suggestions" id="comments" cols="30" rows="10">Enter your comment here...</textarea><br>
+
     </div>
-    <textarea name="comments/suggestions" id="comments" cols="30" rows="10">Enter your comment here...</textarea><br>
     <input type="submit" value="Submit" id="submit">
     </form>
 </body>
